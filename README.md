@@ -1,2 +1,2 @@
 # cloud-storage
-云存储：picgo
+云存储：picgo CSDN
