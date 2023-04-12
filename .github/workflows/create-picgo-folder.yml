@@ -1,9 +1,9 @@
 name: Create PicGo Folder
 
-on:
-  push:
-    branches:
-      - main
+#on:
+ # push:
+  #  branches:
+   #   - main
 #on:
  # schedule:
   #  - cron: '0 15 * * *' # 东八区时间每天23:00执行
