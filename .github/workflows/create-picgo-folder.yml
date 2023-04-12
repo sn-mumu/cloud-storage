@@ -1,0 +1,20 @@
+name: Create picgo folder
+
+on:
+  schedule:
+    - cron: '0 15 * * *' # 东八区时间每天23:00执行
+
+jobs:
+  create-folder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Create folder
+        run: |
+          mkdir -p picgo/$(date +%Y)/$(date +%m)/$(($(date +%d)+1))
+          git add picgo/$(date +%Y)/$(date +%m)/$(($(date +%d)+1))
+          git config --global user.email "youremail@example.com"
+          git config --global user.name "Your Name"
+          git commit -m "Create folder for $(date +%Y-%m-%d+1)"
+          git push origin main
