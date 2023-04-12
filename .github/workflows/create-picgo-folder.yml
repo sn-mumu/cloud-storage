@@ -17,7 +17,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          mkdir -p picgo/$(date +%Y)/$(date +%m)/$(($(date +%d)+1))
-          git add picgo/$(date +%Y)/$(date +%m)/$(($(date +%d)+1))
-          git commit -m "Create folder for $(date +%Y-%m-%d+1)"
+          mkdir -p picgo/$(date +%Y)/$(date +%m)/$(($(date +%d)+31))
+          git config --global user.email "wk131013@163.com"
+          git config --global user.name "sn-mumu"
+          git add picgo/$(date +%Y)/$(date +%m)/$(($(date +%d)+31))
+          git commit -m "Create folder for $(date +%Y-%m-%d+31)"
           git push origin main
