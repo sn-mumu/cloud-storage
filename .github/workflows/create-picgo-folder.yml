@@ -17,6 +17,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          git fetch
           mkdir -p picgo/$(date +%Y)/$(date +%m)/$(($(date +%d)+31))
           git config --global user.email "wk131013@163.com"
           git config --global user.name "sn-mumu"
