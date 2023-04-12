@@ -1,9 +1,9 @@
 name: Create PicGo Folder
 
-#on:
- # push:
-  #  branches:
-   #   - main
+on:
+  push:
+    branches:
+      - main
 #on:
  # schedule:
   #  - cron: '0 15 * * *' # 东八区时间每天23:00执行
@@ -18,7 +18,7 @@ jobs:
         run: |
           mkdir -p PicGo/$(date +%Y)/$(date +%m)/$(($(date +%d)+1))
           git add PicGo/$(date +%Y)/$(date +%m)/$(($(date +%d)+1))
-          git config --global user.email "youremail@example.com"
-          git config --global user.name "Your Name"
+          git config --global user.email "wk131013@163.com"
+          git config --global user.name "sn-mumu"
           git commit -m "Create folder for $(date +%Y-%m-%d+1)"
           git push origin main
