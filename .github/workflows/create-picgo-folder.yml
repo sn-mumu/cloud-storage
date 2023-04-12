@@ -24,7 +24,7 @@ jobs:
           echo 3
           git config --global user.name "sn-mumu"
           echo 4
-          git commit -m "Create folder for $(date +%Y-%m-%d+1)"
+          git commit -m "Create folder "
           echo 5
           git push origin main
           echo 6
